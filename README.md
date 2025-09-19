@@ -33,8 +33,7 @@ Numaer	Technical Lead	Drone & sensor research, image processing, data analysis
 Nikita	Documentation Lead	Creates documentation, manages references, prepares final report and presentation
 Project Scope and Goals
 
-Scope:
-Using drones and software tools to collect, analyze, and visualize environmental data for water restoration projects.
+Scope: Using drones and software tools to collect, analyze, and visualize environmental data for water restoration projects.
 
 Goals:
 
