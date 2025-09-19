@@ -1,140 +1,81 @@
-Drone-Assisted Water Conservation and Restoration Project
-Project Summary
+# Drone-Based Water Conservation & Restoration Project
 
-The project focuses on using drones and modern sensor technologies to support water conservation and restoration projects (e.g., rivers, wetlands).
+## Project Summary
 
-Why drones and sensors?
-They are cost-effective, provide accurate and high-resolution data, and reduce manual labour compared to traditional methods. With advanced sensors, drones can detect changes not only in the landscape but also in the water’s chemical and biological composition.
+This project focuses on using drones and modern sensor technologies to support water conservation and restoration projects, such as rivers and wetlands.
 
-How they help:
+### Why Drones and Sensors?
+- Cost-effective and reduces manual labour.
+- Provides high-resolution and accurate data.
+- Detects changes not only in the landscape but also in water’s chemical and biological composition using advanced sensors.
 
-Capture orthophotographic images (geometrically corrected 2D aerial maps).
+### How They Help
+- Capture orthophotographic images (geometrically corrected 2D aerial maps).
+- Generate photogrammetric 3D models of the terrain.
+- Monitor changes in water quality, vegetation, and land use over time.
+- Detect chemical or biological changes in water using multispectral/hyperspectral sensors.
+- Collect water samples or perform monitoring automatically without human intervention.
+- Integrate with IoT devices for continuous data collection around water bodies.
+- Enable predictive modelling of water quality trends using collected data.
 
-Generate photogrammetric 3D models of the terrain.
+### Innovative Approaches Proposed
+- **Networked system**: Drones and stationary IoT sensors collaborate, sending real-time alerts if pollution, harmful algae, or other anomalies are detected.
+- **Automated drone flights**: Scheduled flights to capture data and samples at regular intervals, reducing human effort.
+- **Predictive modelling**: Use collected data to forecast water quality trends over time, supporting proactive conservation measures.
 
-Monitor changes in water quality, vegetation, and land use over time.
 
-Detect chemical or biological changes in water using multispectral or hyperspectral sensors.
-
-Collect water samples or perform monitoring automatically without human intervention.
-
-Integrate with IoT devices for continuous data collection in and around water bodies.
-
-Enable predictive modelling of water quality trends using collected data.
-
-Innovative Approaches Proposed:
-
-A networked system where drones and stationary IoT sensors collaborate, sending real-time alerts if pollution, harmful algae, or other anomalies are detected.
-
-Scheduled automated drone flights to capture data and samples at regular intervals, reducing human effort.
-
-Using collected data to create predictive models of water quality trends over time, supporting proactive conservation measures.
-
-Case study: The Summa River and Savilammi wetland area in Finland.
-
-Expected Outcome:
+### Expected Outcome
 Drones equipped with advanced sensors, combined with IoT integration and automated monitoring, will make restoration projects more efficient, accurate, proactive, and sustainable.
 
-Team Setup
 
-1. Form the project team
+---
 
-Team members: 3
+## Team Setup
 
-Roles:
+### 1. Project Team
+- **Project Manager:** Uzmatul  
+- **Technical Lead:** Numaer  
+- **Documentation Lead:** Nikita  
 
-Project Manager – Uzmatul
+### 2. Project Scope and Goals
+**Scope:** Using drones, sensors, and IoT devices to collect and analyze water quality and environmental data for restoration projects.  
 
-Technical Lead – Numaer
+**Goals:**
+- Plan water conservation structures using drone imagery and predictive models.
+- Produce orthophotos and 3D terrain models.
+- Implement multispectral/hyperspectral monitoring for water quality.
+- Demonstrate automated sampling and IoT sensor integration.
+- Document benefits, challenges, and lessons learned.
+- Deliver a final report with visualizations, insights, and recommendations.
 
-Documentation Lead – Nikita
 
-2. Define project scope and goals
 
-Scope: Using drones, sensors, and IoT devices to collect, monitor, and analyze environmental and water quality data for restoration projects.
+### 3. Communication Tools
+- Microsoft Teams  
+- WhatsApp  
 
-Goals:
+---
 
-Plan water conservation structures using drone imagery and predictive models.
+## 4.Research Requirements
+- **Data Sources:** Aerial maps, drone datasets, water quality datasets, government data.  
+- **Sensor Technologies:** Multispectral/hyperspectral sensors, drones, IoT water sensors, photogrammetry, GIS tools.  
+- **Analysis Methods:** ArcGIS, WebODM, DJI FlightHub/Terra, Blender for 3D models, data analytics for predictive modelling.  
+- **Security Protocols:** Data storage, permissions, backups in GitHub.  
 
-Produce orthophotos and 3D terrain models.
+---
 
-Implement multispectral/hyperspectral monitoring for water quality.
 
-Demonstrate automated sampling and IoT sensor integration.
 
-Document benefits, challenges, and lessons learned.
+## 5. Testing Plan
+- Test accuracy and clarity of drone imagery versus traditional methods.  
+- Verify 3D models for decision-making.  
+- Test automated sampling and real-time IoT monitoring.  
+- Evaluate predictive model performance against observed water quality trends.  
 
-Deliver a final report with visualizations, insights, and recommendations.
+---
 
-3. Establish milestones and deadlines
 
-Week 1: Team formation + repository setup.
 
-Week 2–3: Research drones, sensors, IoT devices, and methods.
 
-Week 4: Collect or access sample data/images.
 
-Week 5: Process data (ArcGIS, WebODM, DJI Terra, Blender for 3D models).
 
-Week 6: Draft report and predictive models.
-
-Week 7: Final testing, evaluation, and documentation.
-
-Week 8: Submit final markdown/report with images, diagrams, and analyses.
-
-4. Assign roles and responsibilities
-
-Project Manager: Oversees progress, manages deadlines, coordinates communication.
-
-Technical Lead: Handles drone/sensor research, automated monitoring setup, data processing, predictive modelling.
-
-Documentation Lead: Writes markdown docs, prepares final report/presentation, manages references.
-
-5. Set up communication tools
-
-Microsoft Teams and WhatsApp for coordination.
-
-6. Research requirements
-
-Data sources: Aerial maps, drone datasets, water quality datasets, government data.
-
-Sensor technologies: Multispectral/hyperspectral sensors, drones, IoT water sensors, photogrammetry, GIS tools.
-
-Analysis methods: ArcGIS, WebODM, DJI FlightHub/Terra, Blender for 3D models, data analytics for predictive modelling.
-
-Security protocols: Data storage, permissions, backups in GitHub.
-
-7. Documentation
-
-Create a README.md with:
-
-Project description
-
-Team members & roles
-
-Scope, goals, milestones
-
-Tools, methods, and predictive model approach
-
-8. Testing plan
-
-Test accuracy and clarity of drone imagery versus traditional methods.
-
-Verify 3D models for decision-making.
-
-Test automated sampling and real-time IoT monitoring.
-
-Evaluate predictive model performance against observed water quality trends.
-
-Deliverables
-
-At the end of the project, the following will be submitted in a Markdown file (project.md):
-
-Drone orthophotos and 3D models
-
-Diagrams and charts illustrating sensor data and predictive models
-
-Explanations of methods, automated monitoring setup, and IoT integration
-
-Clear documentation of roles, scope, milestones, and conclusions
