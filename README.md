@@ -1,39 +1,75 @@
-# Smart IoT Load Monitoring Station for Finnish Wetlands
-
+Smart IoT Water Quality Monitoring System for Finnish Wetlands
 ## Project Overview
-This project demonstrates a prototype IoT measurement station for monitoring water quality before and after wetlands. It focuses on pollutant load reduction, especially phosphorus, and includes Finnish seasonal effects like snow and cold temperatures.
 
-### Key Features
-* Two tanks simulate inflow (polluted) and outflow (treated) water.
-* Sensors measure pH, turbidity, temperature; optional conductivity/DO.
-* ESP32 embedded system reads sensor data and transmits it to the cloud.
-* Dashboard shows real-time inflow/outflow comparison, predicted phosphorus load, and seasonal variation.
-* Predictive analytics estimate phosphorus (and optionally nitrogen) using regression based on sensor data.
+This project presents a smart IoT-based system designed to monitor water quality parameters in Finnish wetlands.
+The goal is to analyze and predict pollutant concentrations, particularly phosphorus and nitrogen, which are key indicators of water pollution and eutrophication.
 
-## Hardware
-* ESP32 microcontroller
-* pH Sensor
-* Turbidity Sensor
-* Temperature Sensor
-* Optional: Conductivity Sensor, Dissolved Oxygen Sensor
-* Two water tanks (inflow/outflow)
-* Power source + Wi-Fi connectivity
+The system measures essential water parameters using sensors connected to a Raspberry Pi Pico and transmits the data via LoRa communication to a cloud dashboard for visualization and predictive analysis.
+It is specifically adapted to Finnish weather conditions, including snow, ice, and low temperatures.
 
-## Software / IoT Pipeline
-1. ESP32 reads sensor data continuously.
-2. Data sent via MQTT/Wi-Fi to cloud dashboard.
-3. Dashboard visualizes:
-   * Inflow vs outflow water quality
-   * Predicted phosphorus (and optional nitrogen)
-   * Seasonal effects and alerts
+## Key Features
+
+Real-time measurement of Temperature, Conductivity, pH, Dissolved Oxygen (DO), and Turbidity.
+
+Phosphorus and Nitrogen concentrations are calculated using a regression-based model derived from sensor readings.
+
+Raspberry Pi Pico serves as the main embedded controller.
+
+LoRa-based communication enables long-range, low-power data transmission in remote environments.
+
+Cloud dashboard for real-time monitoring, analytics, and visualization.
+
+Adapted for Finnish environmental and seasonal challenges.
+
+## Hardware Components
+
+Raspberry Pi Pico (with LoRa transceiver module)
+
+Sensors:
+
+Temperature Sensor
+
+Conductivity Sensor
+
+pH Sensor
+
+Dissolved Oxygen (DO) Sensor
+
+Turbidity Sensor
+
+LoRa Gateway (for transmitting data to the cloud)
+
+Power source (battery or solar system for field use)
+
+## IoT Pipeline
+
+Data Acquisition
+The Raspberry Pi Pico reads sensor data (temperature, conductivity, pH, DO, turbidity) periodically.
+
+Data Transmission
+Sensor readings are sent via LoRa to a gateway, which forwards the data to a cloud server or dashboard.
+
+Cloud Visualization
+A web-based dashboard displays:
+
+Real-time and historical data trends
+
+Seasonal variations
+
+Alerts for threshold breaches
+
+Predictive Analytics
+A regression model analyzes the collected parameters to predict phosphorus and nitrogen levels, supporting early pollution detection and wetland efficiency analysis.
 
 ## Setup / Usage
-* Connect sensors to ESP32 and place them in inflow/outflow tanks.
-* Power ESP32 and ensure Wi-Fi connection.
-* Start data transmission via MQTT to the cloud dashboard.
-* Monitor real-time measurements, predictions, and alerts on the dashboard.
 
-## Unique Contributions
-* Finnish climate simulation (snow, ice, cold temperatures)
-* Predictive phosphorus estimation based on turbidity & temperature
-* Interactive dashboard with inflow/outflow comparison and alerts
+Connect all sensors to the Raspberry Pi Pico according to pin mapping.
+
+Connect the LoRa transceiver module for data transmission.
+
+Power the device using  battery/solar setup.
+
+Ensure LoRa gateway connectivity to the cloud.
+
+Launch data collection — the dashboard updates automatically with readings.
+
