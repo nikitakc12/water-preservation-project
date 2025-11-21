@@ -29,6 +29,8 @@ Sensors:
 
 Temperature Sensor
 
+TDS Sensor
+
 Conductivity Sensor
 
 pH Sensor
