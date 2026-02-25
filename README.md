@@ -11,7 +11,7 @@ The system collects environmental sensor data in the field, securely transmits i
 
 The solution is engineered for:
 
-* Remote deployment (no WiFi required)
+* Remote deployment 
 * Low operational cost
 * Long-term environmental monitoring
 * Academic and industry demonstration
