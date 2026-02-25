@@ -1,77 +1,168 @@
-Smart IoT Water Quality Monitoring System for Finnish Wetlands
-## Project Overview
+ Smart IoT Water Quality Monitoring System
 
-This project presents a smart IoT-based system designed to monitor water quality parameters in Finnish wetlands.
-The goal is to analyze and predict pollutant concentrations, particularly phosphorus and nitrogen, which are key indicators of water pollution and eutrophication.
+### For Finnish Wetlands
 
-The system measures essential water parameters using sensors connected to a Raspberry Pi Pico and transmits the data via LoRa communication to a cloud dashboard for visualization and predictive analysis.
-It is specifically adapted to Finnish weather conditions, including snow, ice, and low temperatures.
+##  Project Overview
 
-## Key Features
+This project presents a cloud-connected IoT system designed to monitor and predict water quality conditions in Finnish wetlands and river environments.
 
-Real-time measurement of Temperature, Conductivity, pH, Dissolved Oxygen (DO), and Turbidity.
+The system collects environmental sensor data in the field, securely transmits it via 4G cellular internet, stores it in AWS cloud infrastructure, and applies machine learning to predict key pollution indicators such as **Nitrogen** and **Phosphorus**.
 
-Phosphorus and Nitrogen concentrations are calculated using a regression-based model derived from sensor readings.
+The solution is engineered for:
 
-Raspberry Pi Pico serves as the main embedded controller.
+* Remote deployment (no WiFi required)
+* Low operational cost
+* Long-term environmental monitoring
+* Academic and industry demonstration
 
-LoRa-based communication enables long-range, low-power data transmission in remote environments.
+---
 
-Cloud dashboard for real-time monitoring, analytics, and visualization.
+##  System Architecture
 
-Adapted for Finnish environmental and seasonal challenges.
+```
+Water Sensors
+      ↓
+Raspberry Pi Pico W
+      ↓
+4G SIM Router / LTE Module
+      ↓
+AWS IoT Core (MQTT)
+      ↓
+IoT Rule Engine
+      ↓
+Amazon Timestream
+      ↓
+AWS Lambda (ML Prediction)
+      ↓
+Dashboard + CSV Export
+```
 
-## Hardware Components
+---
 
-Raspberry Pi Pico (with LoRa transceiver module)
+##  Hardware Components
 
-Sensors:
+* **Raspberry Pi Pico **
+* 4G SIM Router / LTE Cellular Module
+* Waterproof outdoor enclosure
+* Battery backup system (field deployment)
 
-Temperature Sensor
+### Sensors Used
 
-TDS Sensor
+* Temperature
+* pH
+* Turbidity
+* Dissolved Oxygen (DO)
+* Conductivity
 
-Conductivity Sensor
+Designed to operate in Finnish environmental conditions, including cold weather and outdoor exposure.
 
-pH Sensor
+---
 
-Dissolved Oxygen (DO) Sensor
+##  Data Transmission Strategy
 
-Turbidity Sensor
+* **Sampling interval:** Every 6 hours
+* 4 transmissions per day
+* ~120 transmissions per month
 
-LoRa Gateway (for transmitting data to the cloud)
+This approach ensures:
 
-Power source (battery or solar system for field use)
+* Very low cloud cost
+* Efficient data storage
+* Long-term sustainability
 
-## IoT Pipeline
+---
 
-Data Acquisition
-The Raspberry Pi Pico reads sensor data (temperature, conductivity, pH, DO, turbidity) periodically.
+##  Cloud Infrastructure (AWS)
 
-Data Transmission
-Sensor readings are sent via LoRa to a gateway, which forwards the data to a cloud server or dashboard.
+The system uses the following AWS services:
 
-Cloud Visualization
-A web-based dashboard displays:
+* **AWS IoT Core** – Secure MQTT communication
+* **Amazon Timestream** – Time-series data storage
+* **AWS Lambda** – Machine learning prediction service
+* **Amazon S3** – CSV data export storage
+* **EventBridge Scheduler** – Daily automated export
+* **Amazon Cognito** – Secure dashboard authentication
 
-Real-time and historical data trends
+---
 
-Seasonal variations
+##  Machine Learning Prediction
 
-Alerts for threshold breaches
+A **Multiple Linear Regression** model runs inside AWS Lambda to predict:
 
-Predictive Analytics
-A regression model analyzes the collected parameters to predict phosphorus and nitrogen levels, supporting early pollution detection and wetland efficiency analysis.
+* Nitrogen concentration
+* Phosphorus concentration
 
-## Setup / Usage
+### Input Parameters:
 
-Connect all sensors to the Raspberry Pi Pico according to pin mapping.
+* Temperature
+* pH
+* Turbidity
+* Dissolved Oxygen
+* Conductivity
 
-Connect the LoRa transceiver module for data transmission.
+This enables early pollution detection and wetland performance analysis.
 
-Power the device using  battery/solar setup.
+---
 
-Ensure LoRa gateway connectivity to the cloud.
+##  Dashboard Features
 
-Launch data collection — the dashboard updates automatically with readings.
+* Real-time sensor values
+* Historical data visualization
+* Pollution prediction results
+* Secure company login
+* Automated daily CSV export
+
+---
+
+##  Cost Efficiency
+
+The system is designed to be highly cost-effective.
+
+Estimated operational cost after free tier:
+
+~ **$10–20 per month per monitoring station**
+
+---
+
+##  Deployment Considerations
+
+Field risks include:
+
+* Moisture exposure
+* Power instability
+* Cellular signal loss
+
+Mitigation:
+
+* Waterproof enclosure
+* Backup battery
+* Signal strength monitoring
+
+---
+
+##  Project Purpose
+
+This project demonstrates:
+
+* End-to-end IoT system design
+* Secure cloud integration
+* Time-series data engineering
+* Serverless machine learning
+* Cost-aware environmental monitoring
+
+---
+
+##  Use Cases
+
+* Wetland monitoring
+* River pollution analysis
+* Environmental research
+* Smart city water management
+* Academic IoT & cloud projects
+
+---
+
+#  Summary
+
+A field-deployable, AWS-powered IoT monitoring system designed for reliable, scalable, and cost-efficient water quality monitoring in remote Finnish environments.
 
