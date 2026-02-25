@@ -1,4 +1,3 @@
-
  ### Smart IoT Water Quality Monitoring System
 
 ### For Finnish Wetlands
