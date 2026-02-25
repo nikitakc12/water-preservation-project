@@ -23,7 +23,7 @@ The solution is engineered for:
 ```
 Water Sensors
       ↓
-Raspberry Pi Pico W
+Raspberry Pi Pico 
       ↓
 4G SIM Router / LTE Module
       ↓
@@ -42,7 +42,7 @@ Dashboard + CSV Export
 
 ##  Hardware Components
 
-* **Raspberry Pi Pico **
+* Raspberry Pi Pico 
 * 4G SIM Router / LTE Cellular Module
 * Waterproof outdoor enclosure
 * Battery backup system (field deployment)
