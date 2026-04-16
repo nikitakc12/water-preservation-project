@@ -49,7 +49,7 @@ o	ThingSpeak account
 ### Installation
 1.	Hardware Assembly: Connect sensors and the SIM/SD modules to the Raspberry Pi Pico. Ensure the unit is housed in a waterproof enclosure for outdoor deployment.
 2.	Environment Setup: Install the necessary analysis libraries:
-3.	pip install scikit-learn pandas matplotlib requests
+        pip install scikit-learn pandas matplotlib requests
 4.	Configuration: Update your source code with ThingSpeak API keys (Field 1 for pH, Field 2 for TDS) and network credentials .
 
 ### Usage
@@ -75,23 +75,23 @@ Field Deployment: Once powered, the system samples data every 30 minutes, saving
 ### Architecture Overview
 Water Sensors (pH, TDS)
 
-  ↓
+   ↓
         
 Raspberry Pi Pico (MicroPython)
 
-  ↓
+   ↓
         
 SIM Module (Cellular Internet)
 
-  ↓
+   ↓
         
 ThingSpeak Cloud (Storage + Visualization)
 
-  ↓
+   ↓
         
 Python ML Model (Prediction)
 
-  ↓
+   ↓
         
 Dashboard + CSV Export
 
@@ -123,6 +123,8 @@ This project is licensed under the MIT License.
 
 ### Acknowledgments
 Mechanical Design: Developed in collaboration with the Mechanical Engineering department for the physical structural model.
+
+Sensor Calibration: Special thanks to the Chemistry Lab Faculty for their guidance and expertise in calibrating the pH and TDS sensors for high-accuracy field data.
 
 ### Contact
 Nikita.K.C@student.lab.fi
