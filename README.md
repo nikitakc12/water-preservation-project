@@ -6,15 +6,21 @@ The system is designed for high reliability in the field, featuring dual-path co
 
 ## Features
 •	Live Environmental Monitoring: Real-time collection of pH and Total Dissolved Solids (TDS) data.
+
 •	Connectivity: Supports SIM-based mobile internet for deployment in remote areas.
+
 •	Local Redundancy: Integrated SD card module for local data backup, preventing data loss during network outages.
+
 •	Predictive Analytics: Implements Linear Regression to analyse water quality trends based on live sensor inputs.
+
 •	Cloud Visualization: Real-time time-series graphing and dashboard access via ThingSpeak.
 
 ## Design & Prototyping
 The physical housing and structural model of the system were developed in collaboration with Mechanical Engineering students.
 •	Custom Enclosure: Designed to protect sensitive electronics from harsh outdoor weather and water ingress.
+
 •	Structural Integrity: Focused on secure sensor mounting and buoyancy/stability for river and wetland deployment.
+
 •	Material Selection: Optimized for long-term environmental exposure and durability.
 
 ## Getting Started
