@@ -26,7 +26,7 @@ The physical housing and structural model of the system were developed in collab
 
 ### Getting Started
 ### Prerequisites
-	Hardware:
+ Hardware
 
 o	Raspberry Pi Pico
 
@@ -38,7 +38,7 @@ o	SD Card and Module
 
 o	Waterproof enclosure and battery system
 
-	Software:
+ Software:
 
 o	MicroPython for Raspberry Pi Pico
 
@@ -75,23 +75,23 @@ Field Deployment: Once powered, the system samples data every 30 minutes, saving
 ### Architecture Overview
 Water Sensors (pH, TDS)
 
-        ↓
+  ↓
         
 Raspberry Pi Pico (MicroPython)
 
-        ↓
+  ↓
         
 SIM Module (Cellular Internet)
 
-        ↓
+  ↓
         
 ThingSpeak Cloud (Storage + Visualization)
 
-        ↓
+  ↓
         
 Python ML Model (Prediction)
 
-        ↓
+  ↓
         
 Dashboard + CSV Export
 
