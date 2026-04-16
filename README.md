@@ -16,7 +16,7 @@ The system is designed for high reliability in the field, featuring dual-path co
 •	Cloud Visualization: Real-time time-series graphing and dashboard access via ThingSpeak.
 
 ### Design & Prototyping
-The physical housing and structural model of the system were developed in collaboration with Mechanical Engineering students.
+The physical housing and structural model of the system were developed in collaboration with Mechanical Engineering student.
 
 •	Custom Enclosure: Designed to protect sensitive electronics from harsh outdoor weather and water ingress.
 
@@ -26,7 +26,7 @@ The physical housing and structural model of the system were developed in collab
 
 ### Getting Started
 ### Prerequisites
-•	Hardware:
+	Hardware:
 
 o	Raspberry Pi Pico
 
@@ -38,7 +38,7 @@ o	SD Card and Module
 
 o	Waterproof enclosure and battery system
 
-•	Software:
+	Software:
 
 o	MicroPython for Raspberry Pi Pico
 
@@ -74,15 +74,25 @@ Field Deployment: Once powered, the system samples data every 30 minutes, saving
 
 ### Architecture Overview
 Water Sensors (pH, TDS)
+
         ↓
+        
 Raspberry Pi Pico (MicroPython)
+
         ↓
+        
 SIM Module (Cellular Internet)
+
         ↓
+        
 ThingSpeak Cloud (Storage + Visualization)
+
         ↓
+        
 Python ML Model (Prediction)
+
         ↓
+        
 Dashboard + CSV Export
 
 ### Data Transmission Strategy
@@ -112,10 +122,13 @@ Dashboard + CSV Export
 This project is licensed under the MIT License.
 
 ### Acknowledgments
-•	Mechanical Design: Developed in collaboration with the Mechanical Engineering department for the physical structural model.
+Mechanical Design: Developed in collaboration with the Mechanical Engineering department for the physical structural model.
 
 ### Contact
 Nikita.K.C@student.lab.fi
+
 Uzmatul.Bushra@student.lab.fi
+
 Numaer.Abdus.Salique@student.lab.fi
+
 Project Link: https://github.com/nikitakc12/water-preservation-project 
