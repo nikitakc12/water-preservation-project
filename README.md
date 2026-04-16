@@ -11,7 +11,7 @@ The system is designed for high reliability in the field, featuring dual-path co
 •	Predictive Analytics: Implements Linear Regression to analyse water quality trends based on live sensor inputs.
 •	Cloud Visualization: Real-time time-series graphing and dashboard access via ThingSpeak.
 
-## Mechanical Design & Prototyping
+## Design & Prototyping
 The physical housing and structural model of the system were developed in collaboration with Mechanical Engineering students.
 •	Custom Enclosure: Designed to protect sensitive electronics from harsh outdoor weather and water ingress.
 •	Structural Integrity: Focused on secure sensor mounting and buoyancy/stability for river and wetland deployment.
