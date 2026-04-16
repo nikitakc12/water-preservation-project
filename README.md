@@ -1,168 +1,92 @@
- ### Smart IoT Water Quality Monitoring System
+### Smart IoT Water Quality Monitoring System
 
-### For Finnish Wetlands
+## Overview
+This project presents a cloud-connected IoT system designed to monitor, analyse, and predict water quality in real outdoor environments, specifically tailored for Finnish wetlands and river ecosystems. The system bridges the gap between field-level hardware collection and predictive analytics, providing a robust solution for remote environmental surveillance.
+The system is designed for high reliability in the field, featuring dual-path connectivity and local data redundancy to ensure continuous monitoring regardless of network stability.
 
-##  Project Overview
+## Features
+•	Live Environmental Monitoring: Real-time collection of pH and Total Dissolved Solids (TDS) data.
+•	Connectivity: Supports SIM-based mobile internet for deployment in remote areas.
+•	Local Redundancy: Integrated SD card module for local data backup, preventing data loss during network outages.
+•	Predictive Analytics: Implements Linear Regression to analyse water quality trends based on live sensor inputs.
+•	Cloud Visualization: Real-time time-series graphing and dashboard access via ThingSpeak.
 
-This project presents a cloud-connected IoT system designed to monitor and predict water quality conditions in Finnish wetlands and river environments.
+## Mechanical Design & Prototyping
+The physical housing and structural model of the system were developed in collaboration with Mechanical Engineering students.
+•	Custom Enclosure: Designed to protect sensitive electronics from harsh outdoor weather and water ingress.
+•	Structural Integrity: Focused on secure sensor mounting and buoyancy/stability for river and wetland deployment.
+•	Material Selection: Optimized for long-term environmental exposure and durability.
 
-The system collects environmental sensor data in the field, securely transmits it via 4G cellular internet, stores it in AWS cloud infrastructure, and applies machine learning to predict key pollution indicators such as **Nitrogen** and **Phosphorus**.
+## Getting Started
+## Prerequisites
+•	Hardware:
+o	Raspberry Pi Pico
+o	pH and TDS Sensors
+o	SIM Module (Cellular)
+o	SD Card and Module
+o	Waterproof enclosure and battery system
+•	Software:
+o	MicroPython for Raspberry Pi Pico
+o	Python 3.x (Scikit-learn, Pandas)
+o	ThingSpeak account
 
-The solution is engineered for:
+## Installation
+1.	Hardware Assembly: Connect sensors and the SIM/SD modules to the Raspberry Pi Pico. Ensure the unit is housed in a waterproof enclosure for outdoor deployment.
+2.	Environment Setup: Install the necessary analysis libraries:
+3.	pip install scikit-learn pandas matplotlib requests
+4.	Configuration: Update your source code with ThingSpeak API keys (Field 1 for pH, Field 2 for TDS) and network credentials .
 
-* Remote deployment 
-* Low operational cost
-* Long-term environmental monitoring
-* Academic and industry demonstration
+## Usage
+•	Field Deployment: Once powered, the system samples data every 30 minutes, saving a copy to the SD card and transmitting the results to the cloud.
+•	Cloud Monitoring: Use the ThingSpeak dashboard for live trend visualization and shared company access.
+•	Machine Learning Analysis:
+1.	Retrieve live data from ThingSpeak via the Python API.
+2.	Feed data into the Linear Regression model to generate quality predictions.
+3.	Analyse results via scatter plots and regression trend graphs.
 
----
+## Project Structure and Tech Stack
+•	Microcontroller: Raspberry Pi Pico (MicroPython)
+•	Connectivity: WiFi / SIM Module (Cellular Internet)
+•	Storage: ThingSpeak Cloud + Local SD Card Backup
+•	Analytics: Python (Linear Regression, CSV Export)
 
-##  System Architecture
-
-```
-Water Sensors
-      ↓
-Raspberry Pi Pico 
-      ↓
-4G SIM Router / LTE Module
-      ↓
-AWS IoT Core (MQTT)
-      ↓
-IoT Rule Engine
-      ↓
-Amazon Timestream
-      ↓
-AWS Lambda (ML Prediction)
-      ↓
+## Architecture Overview
+Water Sensors (pH, TDS)
+        ↓
+Raspberry Pi Pico (MicroPython)
+        ↓
+SIM Module (Cellular Internet)
+        ↓
+ThingSpeak Cloud (Storage + Visualization)
+        ↓
+Python ML Model (Prediction)
+        ↓
 Dashboard + CSV Export
-```
 
----
+## Data Transmission Strategy
+•	Frequency: Data is transmitted every 30 minutes (~48 points per day).
+•	Efficiency: This schedule ensures a robust dataset for machine learning while remaining within the free-tier cloud limits.
+•	Reliability: If internet connectivity fails, the SD card maintains a local record of all readings.
 
-##  Hardware Components
+## Deployment Considerations
+•	Harsh Conditions: The system requires a waterproof casing to survive Finnish outdoor weather.
+•	Power Management: Battery systems are essential for river and wetland locations where mains power is unavailable.
+•	Network Availability: The SIM-based module is the preferred primary connection for remote field use.
 
-* Raspberry Pi Pico 
-* 4G SIM Router / LTE Cellular Module
-* Waterproof outdoor enclosure
-* Battery backup system (field deployment)
+## Roadmap
+•	Sensor Integration: Add Temperature, Turbidity, Dissolved Oxygen, and Conductivity.
+•	Advanced Modelling: Transition to multi-variable prediction models for higher accuracy.
+•	Dashboard Evolution: ThingSpeak dashboard.
+•	Automation: Implement cloud-automated ML pipelines and anomaly/pollution alerts.
 
-### Sensors Used
+## License
+This project is licensed under the MIT License.
 
-* Temperature
-* pH
-* Turbidity
-* Dissolved Oxygen (DO)
-* Conductivity
+## Acknowledgments
+•	Mechanical Design: Developed in collaboration with the Mechanical Engineering department for the physical structural model.
 
-Designed to operate in Finnish environmental conditions, including cold weather and outdoor exposure.
-
----
-
-##  Data Transmission Strategy
-
-* **Sampling interval:** Every 6 hours
-* 4 transmissions per day
-* ~120 transmissions per month
-
-This approach ensures:
-
-* Very low cloud cost
-* Efficient data storage
-* Long-term sustainability
-
----
-
-##  Cloud Infrastructure (AWS)
-
-The system uses the following AWS services:
-
-* **AWS IoT Core** – Secure MQTT communication
-* **Amazon Timestream** – Time-series data storage
-* **AWS Lambda** – Machine learning prediction service
-* **Amazon S3** – CSV data export storage
-* **EventBridge Scheduler** – Daily automated export
-* **Amazon Cognito** – Secure dashboard authentication
-
----
-
-##  Machine Learning Prediction
-
-A **Multiple Linear Regression** model runs inside AWS Lambda to predict:
-
-* Nitrogen concentration
-* Phosphorus concentration
-
-### Input Parameters:
-
-* Temperature
-* pH
-* Turbidity
-* Dissolved Oxygen
-* Conductivity
-
-This enables early pollution detection and wetland performance analysis.
-
----
-
-##  Dashboard Features
-
-* Real-time sensor values
-* Historical data visualization
-* Pollution prediction results
-* Secure company login
-* Automated daily CSV export
-
----
-
-##  Cost Efficiency
-
-The system is designed to be highly cost-effective.
-
-Estimated operational cost after free tier:
-
-~ **$10–20 per month per monitoring station**
-
----
-
-##  Deployment Considerations
-
-Field risks include:
-
-* Moisture exposure
-* Power instability
-* Cellular signal loss
-
-Mitigation:
-
-* Waterproof enclosure
-* Backup battery
-* Signal strength monitoring
-
----
-
-##  Project Purpose
-
-This project demonstrates:
-
-* End-to-end IoT system design
-* Secure cloud integration
-* Time-series data engineering
-* Serverless machine learning
-* Cost-aware environmental monitoring
-
----
-
-##  Use Cases
-
-* Wetland monitoring
-* River pollution analysis
-* Environmental research
-* Smart city water management
-* Academic IoT & cloud projects
-
----
-
-#  Summary
-
-A field-deployable, AWS-powered IoT monitoring system designed for reliable, scalable, and cost-efficient water quality monitoring in remote Finnish environments.
-
+## Contact
+Nikita.K.C@student.lab.fi
+Uzmatul.Bushra@student.lab.fi
+Numaer.Abdus.Salique@student.lab.fi
+Project Link: https://github.com/nikitakc12/water-preservation-project 
