@@ -5,7 +5,7 @@
 This project leverages Machine Learning to enhance water quality monitoring in Finnish catchments. By utilizing the **Kuonanjoki Water Quality Dataset**, we have developed two distinct regression models to bridge the gap between expensive laboratory measurements and real-time sensor data.
 
 ###  The Two-Fold ML Objective
-1.  **Nutrient Prediction (The "Virtual Sensor"):** Predicting **Total Phosphorus (Ptot)** using historical data.
+1.  **Nutrient Prediction :** Predicting **Total Phosphorus (Ptot)** using historical data.
 2.  **State Prediction:** Predicting **Turbidity** and **Conductivity** using historical data.
 
 ---
