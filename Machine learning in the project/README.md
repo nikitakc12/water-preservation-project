@@ -26,7 +26,7 @@ We utilized the **Random Forest Regressor** for both tasks. This ensemble method
 
 ### Model 1: The Virtual Nutrient Sensor
 - **Target:** `Ptot [µg/l]` (Phosphorus)
-- **Inputs:** Turbidity, Discharge, Temperature, Velocity, Conductivity.
+- **Inputs:** Turbidity, Temperature, Conductivity.
 - **Use Case:** Provides real-time phosphorus data every 30 minutes, replacing the 2-week delay of traditional lab tests.
 
 ### Model 2: Environmental State Forecaster
