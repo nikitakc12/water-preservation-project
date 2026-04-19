@@ -13,7 +13,7 @@ This project leverages Machine Learning to enhance water quality monitoring in F
 ## Dataset
 The study uses high-frequency monitoring data from **Etsin (Fairdata.fi)** , focusing on the Kuonanjoki catchment.
 - **Source:** [Dataset - Data - Etsin](https://etsin.fairdata.fi/dataset/7f2f6cf0-a250-4ba2-be06-73510368dcb2)
-- **Parameters:** Water Temperature, Conductivity, Dissolved Oxygen, Turbidity, Suspended Solids, Ptot (Phosphorus), TOC, Velocity, and Discharge.
+- **Parameters:** Water Temperature, Conductivity, Dissolved Oxygen, Turbidity, Suspended Solids and Ptot (Phosphorus).
 - **Interval:** 30-minute sensor readings.
 
 ---
